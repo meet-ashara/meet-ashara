@@ -1,0 +1,16 @@
+{
+  "name": "Meet Ashara Portfolio",
+  "short_name": "MeetAshara",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a1a",
+  "description": "Portfolio of Meet Ashara - Python Developer, Web Scraping, Automation, AI/ML",
+  "icons": [
+    {
+      "src": "/photo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

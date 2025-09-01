@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== Primary SEO ===== -->
+  <title>Meet Ashara | Python Developer | Web Scraping & Automation</title>
+  <meta name="description" content="Meet Ashara - Python Developer skilled in Web Scraping, Automation, APIs, FastAPI, Flask, Django, and AI/ML. Portfolio with live demos and project screenshots." />
+  <meta name="keywords" content="Meet Ashara, Python Developer, Web Scraping, Automation, FastAPI, Flask, Django, API Development, Data Engineering, AI, ML, Portfolio" />
+  <meta name="author" content="Meet Ashara" />
+  <link rel="canonical" href="https://meet-ashara.github.io/meet-ashara/" />
+  <link rel="manifest" href="manifest.json">
+
+
+  <!-- ===== Open Graph / Social ===== -->
+  <meta property="og:title" content="Meet Ashara | Python Developer" />
+  <meta property="og:description" content="Web Scraping, Automation, APIs (FastAPI/Flask/Django) and AI/ML projects with live demos." />
+  <!-- IMPORTANT: update if your image path changes -->
+  <meta property="og:image" content="https://meet-ashara.github.io/meet-ashara/photo.png" />
+  <meta property="og:url" content="https://meet-ashara.github.io/meet-ashara/" />
+  <meta property="og:type" content="website" />
+
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meet Ashara | Python Developer" />
+  <meta name="twitter:description" content="Web Scraping • Automation • APIs • AI/ML" />
+  <meta name="twitter:image" content="https://meet-ashara.github.io/meet-ashara/photo.png" />
+
+  <!-- PWA theme colors (light/dark) -->
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b1220" />
+
+  <!-- Favicon (uses your profile photo) -->
+  <link rel="icon" href="photo.png" type="image/png" />
+
+  <!-- Preconnect fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- TailwindCSS CDN (v3) + config for dark mode -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff7ed', 100: '#ffedd5', 200: '#fed7aa', 300: '#fdba74',
+              400: '#fb923c', 500: '#f59e0b', 600: '#d97706', 700: '#b45309', 800: '#92400e', 900: '#78350f'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,0.15)',
+            glow: '0 0 30px rgba(245, 158, 11, 0.3)'
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: 0, transform: 'translateY(10px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            },
+            fadeInDown: {
+              '0%': { opacity: 0, transform: 'translateY(-10px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            },
+            slideInLeft: {
+              '0%': { opacity: 0, transform: 'translateX(-20px)' },
+              '100%': { opacity: 1, transform: 'translateX(0)' }
+            },
+            floaty: {
+              '0%, 100%': { transform: 'translateY(0) scale(1)' },
+              '50%': { transform: 'translateY(-6px) scale(1.02)' }
+            },
+            blink: {
+              '0%, 100%': { opacity: 1 },
+              '50%': { opacity: 0 }
+            },
+            pulse: {
+              '0%, 100%': { opacity: 1 },
+              '50%': { opacity: 0.8 }
+            },
+            bounce: {
+              '0%, 20%, 53%, 100%': { transform: 'translateY(0)' },
+              '40%, 43%': { transform: 'translateY(-8px)' }
+            }
+          },
+          animation: {
+            fadeInUp: 'fadeInUp 700ms ease-out both',
+            fadeInDown: 'fadeInDown 500ms ease-out both',
+            slideInLeft: 'slideInLeft 600ms ease-out both',
+            floaty: 'floaty 6s ease-in-out infinite',
+            blink: 'blink 1s step-end infinite',
+            pulse: 'pulse 2s ease-in-out infinite',
+            bounce: 'bounce 2s infinite'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- ===== Prevent FOUC for dark mode ===== -->
+  <script>
+    (function() {
+      const ls = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (ls === 'dark' || (!ls && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+
+  <style>
+    :root { --bg: #0b1220; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, "Noto Sans", sans-serif; }
+    /* Smooth scroll for anchor links */
+    html { scroll-behavior: smooth; }
+    /* Offset for fixed header */
+    section { scroll-margin-top: 88px; }
+    
+    /* Enhanced hover effects */
+    .hover-lift {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .hover-lift:hover {
+      transform: translateY(-2px);
+    }
+    
+    /* Enhanced button interactions */
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
+    }
+    
+    /* Skill card interactions */
+    .skill-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .skill-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(99, 102, 241, 0.1));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .skill-card:hover::before {
+      opacity: 1;
+    }
+    .skill-card:hover {
+      transform: translateY(-3px) scale(1.02);
+      border-color: rgba(245, 158, 11, 0.5);
+    }
+    
+    /* Project card enhancements */
+    .project-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    }
+    .project-card:hover .project-image {
+      transform: scale(1.05);
+    }
+    .project-image {
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Navigation link animations */
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #f59e0b;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    /* Social link hover effects */
+    .social-link {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .social-link:hover {
+      transform: translateY(-2px) scale(1.05);
+    }
+    
+    /* Typing cursor enhancement */
+    .typing-cursor {
+      display: inline-block;
+      width: 3px;
+      height: 1.2em;
+      background: currentColor;
+      margin-left: 2px;
+      animation: blink 1s infinite;
+    }
+    
+    /* Header blur enhancement */
+    .header-blur {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(90deg, #f59e0b, #d97706);
+      z-index: 100;
+      transition: width 0.3s ease;
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Meet Ashara",
+    "url": "https://meet-ashara.github.io/meet-ashara/",
+    "image": "https://meet-ashara.github.io/meet-ashara/photo.png",
+    "jobTitle": "Python Developer",
+    "sameAs": [
+      "https://github.com/meetashara31",
+      "https://github.com/meet-ashara",
+      "https://www.linkedin.com/in/meetashara/",
+      "https://www.instagram.com/meet_ashara/"
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-white text-gray-900 dark:bg-[#0b1220] dark:text-gray-100">
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-indicator" id="scrollIndicator"></div>
+
+  <!-- ===== Header / Nav ===== -->
+  <header class="fixed top-0 inset-x-0 z-50 header-blur bg-white/70 dark:bg-[#0b1220]/70 border-b border-gray-200/60 dark:border-white/10 animate-fadeInDown">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3 group hover-lift">
+        <img src="photo.png" alt="Meet Ashara profile" class="w-9 h-9 rounded-full ring-2 ring-brand-500/30 group-hover:ring-brand-500/60 transition-all duration-300" />
+        <span class="font-extrabold tracking-tight text-lg">Meet Ashara</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#about" class="nav-link hover:text-brand-500">About</a>
+        <a href="#projects" class="nav-link hover:text-brand-500">Projects</a>
+        <a href="#contact" class="nav-link hover:text-brand-500">Contact</a>
+        <a href="A:/work space/portfolio/resume.pdf" class="btn-primary inline-flex items-center px-3 py-1.5 rounded-lg bg-brand-500 text-white hover:bg-brand-600 shadow-soft">Resume</a>
+      </nav>
+      <!-- Theme toggle -->
+      <button id="themeToggle" aria-label="Toggle dark mode" class="ml-4 inline-flex items-center justify-center w-10 h-10 rounded-xl border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-300 hover-lift">
+        <!-- Sun -->
+        <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:block transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364 6.364l-1.414-1.414M7.05 7.05 5.636 5.636m12.728 0-1.414 1.414M7.05 16.95l-1.414 1.414M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+        </svg>
+        <!-- Moon -->
+        <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 dark:hidden transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
+    <div class="absolute -top-24 -right-24 w-80 h-80 bg-brand-500/20 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl animate-pulse"></div>
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-[1.1fr,1fr] items-center gap-10">
+      <div class="text-center md:text-left">
+        <p class="text-brand-600 dark:text-brand-400 font-semibold tracking-wide mb-2 animate-slideInLeft">Python Developer • Web Scraping • APIs</p>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+          <span id="typedTitle" class="whitespace-pre"></span><span class="typing-cursor">&nbsp;</span>
+        </h1>
+        <p class="mt-5 text-lg text-gray-600 dark:text-gray-300 max-w-2xl animate-fadeInUp" style="animation-delay: 0.3s;">I turn raw web data into clean, reliable APIs using FastAPI/Flask/Django. Passionate about automation, data, and shipping useful tools.</p>
+        <div class="mt-7 flex flex-wrap gap-3 animate-fadeInUp" style="animation-delay: 0.5s;">
+          <a href="#projects" class="btn-primary inline-flex items-center px-5 py-3 rounded-xl bg-brand-500 text-white hover:bg-brand-600 shadow-soft">View Projects</a>
+          <a href="#contact" class="hover-lift inline-flex items-center px-5 py-3 rounded-xl border border-gray-300 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-300">Contact</a>
+        </div>
+      </div>
+
+      <div class="flex justify-center md:justify-end">
+        <img src="photo.png" alt="Meet Ashara portrait" class="w-56 h-56 md:w-72 md:h-72 rounded-3xl object-cover ring-4 ring-brand-500/30 shadow-soft animate-floaty hover:ring-brand-500/50 transition-all duration-500" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="py-24" data-reveal>
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-6">About Me</h2>
+      <p class="text-gray-700 dark:text-gray-300 max-w-3xl">I'm a <strong>Python</strong> developer specialized in <strong>Web/Data Scraping</strong>, <strong>API Development</strong> (FastAPI/Flask/Django), and <strong>automation</strong>. I enjoy building reliable scrapers, clean APIs, and data pipelines that solve real-world problems. Comfortable with MySQL, PostgreSQL, MongoDB, Selenium/Playwright, and Pandas/NumPy.</p>
+
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="skill-card p-4 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5">Python • FastAPI • Flask</div>
+        <div class="skill-card p-4 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5">Selenium • Playwright • BeautifulSoup • lxml</div>
+        <div class="skill-card p-4 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5">MySQL • PostgreSQL • MongoDB</div>
+        <div class="skill-card p-4 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5">TailwindCSS • Render • Git/GitHub</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="py-24 bg-gray-50 dark:bg-white/5" data-reveal>
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Featured Projects</h2>
+      <p class="text-gray-700 dark:text-gray-300 mb-10">A few production-ready scrapers & APIs. Each card links to the live demo.</p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Flipkart -->
+        <article class="project-card group rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 shadow-soft">
+          <img src="flipkart.png" alt="Flipkart Product Scraper UI - by Meet Ashara" class="project-image w-full h-44 object-cover" />
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Flipkart Product Scraper API + UI</h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">FastAPI service that extracts product details (price, ratings, seller, images) with a Tailwind/Flowbite UI.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <a href="https://flipkart-url-api.onrender.com/" target="_blank" rel="noopener" class="btn-primary px-3 py-1.5 rounded-lg bg-brand-500 text-white hover:bg-brand-600 text-sm">Live Demo</a>
+              <a href="https://github.com/meet-ashara/flipkart_url_api" class="hover-lift px-3 py-1.5 rounded-lg border border-gray-300 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/10 text-sm transition-all duration-300">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blinkit -->
+        <article class="project-card group rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 shadow-soft">
+          <img src="blinkit.png" alt="Blinkit Product Scraper UI - by Meet Ashara" class="project-image w-full h-44 object-cover" />
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Blinkit Product Scraper (API + UI)</h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Scrapes via product ID or URL with a clean Tailwind UI and robust error handling.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <a href="https://blinkit-api-d7dr.onrender.com" target="_blank" rel="noopener" class="btn-primary px-3 py-1.5 rounded-lg bg-brand-500 text-white hover:bg-brand-600 text-sm">Live Demo</a>
+              <a href="https://github.com/meetashara31/blinkit_pdp_api" target="_blank" rel="noopener" class="hover-lift px-3 py-1.5 rounded-lg border border-gray-300 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/10 text-sm transition-all duration-300">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Amazon ASIN -->
+        <article class="project-card group rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 shadow-soft">
+          <img src="amazon.png" alt="Amazon ASIN Scraper UI - by Meet Ashara" class="project-image w-full h-44 object-cover" />
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Amazon ASIN Scraper API</h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Extracts product details using only an ASIN. Includes Swagger docs and health checks.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <a href="https://amazon-asin-api.onrender.com/" target="_blank" rel="noopener" class="btn-primary px-3 py-1.5 rounded-lg bg-brand-500 text-white hover:bg-brand-600 text-sm">Live Demo</a>
+              <a href="https://github.com/meetashara31/amazon_asin_api" target="_blank" rel="noopener" class="hover-lift px-3 py-1.5 rounded-lg border border-gray-300 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/10 text-sm transition-all duration-300">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="py-24" data-reveal>
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Let's work together</h2>
+          <p class="text-gray-700 dark:text-gray-300">Open to work, freelance, and full-time roles in backend development, data engineering, and automation.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="mailto:meetashara2003@gmail.com" class="btn-primary px-4 py-2 rounded-xl bg-brand-500 text-white hover:bg-brand-600 shadow-soft">Email Me</a>
+            <a href="https://www.linkedin.com/in/meetashara/" target="_blank" rel="noopener" class="social-link px-4 py-2 rounded-xl border border-gray-300 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/10">LinkedIn</a>
+            <a href="https://github.com/meet-ashara" target="_blank" rel="noopener" class="social-link px-4 py-2 rounded-xl border border-gray-300 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/10">GitHub</a>
+            <a href="https://www.instagram.com/meet_ashara/" target="_blank" rel="noopener" class="social-link px-4 py-2 rounded-xl border border-gray-300 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/10">Instagram</a>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="photo.png" alt="Meet Ashara profile" class="w-full max-w-sm mx-auto rounded-3xl ring-4 ring-brand-500/20 shadow-soft hover:ring-brand-500/40 transition-all duration-500 hover-lift" />
+          <div class="absolute -z-10 -inset-6 bg-gradient-to-tr from-brand-500/10 to-indigo-500/10 rounded-[2rem] blur-2xl"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="py-8 border-t border-gray-200 dark:border-white/10">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-gray-600 dark:text-gray-400">© <span id="year"></span> Meet Ashara. All rights reserved.</p>
+      <div class="flex items-center gap-4 text-sm">
+        <a href="#about" class="nav-link hover:text-brand-500">About</a>
+        <a href="#projects" class="nav-link hover:text-brand-500">Projects</a>
+        <a href="#contact" class="nav-link hover:text-brand-500">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Enhanced theme toggler with smooth transition
+    const toggleBtn = document.getElementById('themeToggle');
+    const sunIcon = document.getElementById('iconSun');
+    const moonIcon = document.getElementById('iconMoon');
+    
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      
+      // Add rotation animation to icons
+      if (isDark) {
+        moonIcon.style.transform = 'rotate(180deg)';
+        sunIcon.style.transform = 'rotate(0deg)';
+      } else {
+        sunIcon.style.transform = 'rotate(180deg)';
+        moonIcon.style.transform = 'rotate(0deg)';
+      }
+    });
+
+    // Enhanced typewriter effect
+    const titleEl = document.getElementById('typedTitle');
+    const text = "Hi, I'm Meet Ashara";
+    let i = 0;
+    function type() {
+      if (i <= text.length) {
+        titleEl.textContent = text.slice(0, i);
+        i++;
+        setTimeout(type, 70); // typing speed
+      }
+    }
+    
+    // Start typing after a slight delay
+    window.addEventListener('load', () => {
+      setTimeout(type, 500);
+    });
+
+    // Enhanced scroll reveal
+    const revealEls = document.querySelectorAll('[data-reveal]');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('animate-fadeInUp');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach((el) => io.observe(el));
+
+    // Scroll progress indicator
+    const scrollIndicator = document.getElementById('scrollIndicator');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.body.offsetHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      scrollIndicator.style.width = scrollPercent + '%';
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Enhanced skill card animations on scroll
+    const skillCards = document.querySelectorAll('.skill-card');
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.animationDelay = `${index * 0.1}s`;
+            entry.target.classList.add('animate-fadeInUp');
+          }, index * 100);
+          skillObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    skillCards.forEach(card => skillObserver.observe(card));
+
+    // Enhanced project card animations
+    const projectCards = document.querySelectorAll('.project-card');
+    const projectObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.animationDelay = `${index * 0.2}s`;
+            entry.target.classList.add('animate-fadeInUp');
+          }, index * 200);
+          projectObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    projectCards.forEach(card => projectObserver.observe(card));
+
+    // Add parallax effect to background elements
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const parallaxElements = document.querySelectorAll('[class*="blur-3xl"]');
+      
+      parallaxElements.forEach((element, index) => {
+        const speed = 0.5 + (index * 0.1);
+        element.style.transform = `translateY(${scrolled * speed}px)`;
+      });
+    });
+
+    // Enhanced button click feedback
+    document.querySelectorAll('.btn-primary, .hover-lift').forEach(button => {
+      button.addEventListener('click', function(e) {
+        // Create ripple effect
+        const ripple = document.createElement('div');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.cssText = `
+          position: absolute;
+          width: ${size}px;
+          height: ${size}px;
+          left: ${x}px;
+          top: ${y}px;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          transform: scale(0);
+          animation: ripple 0.6s linear;
+          pointer-events: none;
+        `;
+        
+        this.style.position = 'relative';
+        this.style.overflow = 'hidden';
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    });
+
+    // Add ripple animation keyframes
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes ripple {
+        to {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Enhanced loading animation
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+      
+      // Animate elements on load
+      setTimeout(() => {
+        document.querySelector('header').classList.add('animate-fadeInDown');
+      }, 100);
+    });
+
+    // Add mouse movement parallax for hero image
+    const heroImage = document.querySelector('#home img[alt="Meet Ashara portrait"]');
+    if (heroImage) {
+      document.addEventListener('mousemove', (e) => {
+        const { clientX, clientY } = e;
+        const { innerWidth, innerHeight } = window;
+        const xPos = (clientX / innerWidth - 0.5) * 20;
+        const yPos = (clientY / innerHeight - 0.5) * 20;
+        
+        heroImage.style.transform = `translate(${xPos}px, ${yPos}px) scale(1.02)`;
+      });
+    }
+  </script>
