@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://meet-ashara.github.io/sitemap.xml
+Sitemap: https://meet-ashara.github.io/meet-ashara/sitemap.xml
