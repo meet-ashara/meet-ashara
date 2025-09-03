@@ -21,7 +21,7 @@ I believe in *learning by building* and solving real-world problems with code.
 [![LinkedIn](https://img.shields.io/badge/Meet%20Ashara%20on%20LinkedIn-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/meetashara/)  
 [![GitHub](https://img.shields.io/badge/Meet%20Ashara%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/meet-ashara)  
 [![Instagram](https://img.shields.io/badge/Meet%20Ashara%20on%20Instagram-purple?style=for-the-badge&logo=instagram)](https://www.instagram.com/meet_ashara/)  
-[![Portfolio](https://img.shields.io/badge/Meet%20Ashara%20Portfolio-green?style=for-the-badge&logo=firefox)](https://yourportfolio.com)  
+[![Portfolio](https://img.shields.io/badge/Meet%20Ashara%20Portfolio-green?style=for-the-badge&logo=firefox)](https://meet-ashara.github.io/meet-ashara/)  
 
 ---
 
@@ -38,8 +38,7 @@ I believe in *learning by building* and solving real-world problems with code.
 ![Meet Ashara Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=meet-ashara&layout=compact&theme=radical)  
 ![Meet Ashara Streak Stats](https://github-readme-streak-stats.herokuapp.com/?user=meet-ashara&theme=radical)  
 ![Meet Ashara Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=meet-ashara&theme=react-dark)  
-Meet Ashara > https://meet-ashara.github.io/meet-ashara/
----
+
 
 ### 🚀 Featured Projects by Meet Ashara  
 - 🔎 **E-commerce Scraper API** → FastAPI service to extract product data (price, reviews, rating, brand) from e-commerce websites  
@@ -51,5 +50,6 @@ Meet Ashara > https://meet-ashara.github.io/meet-ashara/
 ---
 
 ⭐ **Fun Fact:** Every project I create is a step toward becoming a better problem solver.  
+
 
 ---
