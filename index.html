@@ -613,25 +613,8 @@
         heroImage.style.transform = `translate(${xPos}px, ${yPos}px) scale(1.02)`;
       });
     }
-    const titleEl = document.getElementById('typedTitle');
-const cursorEl = document.querySelector('.typing-cursor');
-const text = "Hi, I'm Meet Ashara";
-let i = 0;
-
-function type() {
-  if (i <= text.length) {
-    titleEl.textContent = text.slice(0, i);
-    i++;
-    setTimeout(type, 70); // typing speed
-  } else {
-    // typing finished → hide cursor
-    cursorEl.style.display = 'none';
-  }
-}
-
-type();
-
 
   </script>
+
 
 
