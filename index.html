@@ -451,15 +451,40 @@
       }
     });
 
-    // Enhanced typewriter effect
+// Enhanced typewriter effect
     const titleEl = document.getElementById('typedTitle');
+    const cursor = document.querySelector('.typing-cursor');
     const text = "Hi, I'm Meet Ashara";
     let i = 0;
+    
+    // Debug: Check if elements are found
+    console.log('Title element:', titleEl);
+    console.log('Cursor element:', cursor);
+    
     function type() {
       if (i <= text.length) {
         titleEl.textContent = text.slice(0, i);
         i++;
         setTimeout(type, 70); // typing speed
+      } else {
+        console.log('Typing complete, hiding cursor...');
+        // Smooth fade out of cursor after typing is complete
+        setTimeout(() => {
+          if (cursor) {
+            console.log('Fading cursor out...');
+            cursor.style.animation = 'none'; // Stop blinking
+            cursor.style.transition = 'opacity 0.8s ease-out';
+            cursor.style.opacity = '0';
+            
+            // Completely remove after fade completes
+            setTimeout(() => {
+              cursor.style.display = 'none';
+              console.log('Cursor hidden');
+            }, 800);
+          } else {
+            console.log('Cursor element not found!');
+          }
+        }, 500); // Wait 1 second before starting fade
       }
     }
     
@@ -617,4 +642,6 @@
   </script>
 
 
+</body>
+</html>
 
